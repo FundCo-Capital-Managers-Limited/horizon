@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
-export const metadata: Metadata = { title: "Contact Us | Horizon Energy" };
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Horizon Energy's Freetown, Sierra Leone team about mini-grid partnerships, funding opportunities, or community power projects.",
+};
 
 export default function Contact() {
   return (

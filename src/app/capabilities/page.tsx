@@ -3,7 +3,9 @@ import PageHero from "@/components/PageHero";
 import JoinCta from "@/components/JoinCta";
 
 export const metadata: Metadata = {
-  title: "Capabilities | Horizon Energy",
+  title: "Capabilities",
+  description:
+    "Solar PV generation, medium- and low-voltage distribution grid infrastructure, project management, civil works, and in-house GIS-based research and site development — Horizon's full mini-grid value chain.",
 };
 
 const SECTIONS = [

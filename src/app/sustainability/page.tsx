@@ -4,7 +4,9 @@ import PageHero from "@/components/PageHero";
 import JoinCta from "@/components/JoinCta";
 
 export const metadata: Metadata = {
-  title: "Sustainability & Safety | Horizon Energy",
+  title: "Sustainability & Safety",
+  description:
+    "Horizon Energy's Environmental, Social, Health & Safety (ESHS) policy, Nine Life Saving Rules, and commitment to a vision of zero injuries across every mini-grid site in Sierra Leone.",
 };
 
 const LIFE_SAVING_RULES = [

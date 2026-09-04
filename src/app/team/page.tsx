@@ -3,7 +3,9 @@ import PageHero from "@/components/PageHero";
 import JoinCta from "@/components/JoinCta";
 
 export const metadata: Metadata = {
-  title: "Our Team | Horizon Energy",
+  title: "Our Team",
+  description:
+    "Meet Horizon Energy's founders and leadership, whose combined 20+ years of hands-on solar mini-grid experience spans every district of Sierra Leone and the wider West African region.",
 };
 
 const LEADERSHIP = [

@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 
-export const metadata: Metadata = { title: "Privacy Policy | Horizon Energy" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "How Horizon Energy Company (SL) Limited collects, uses, retains, and protects your personal data when you use horizonenergy.org.",
+};
 
 function P({ children }: { children: React.ReactNode }) {
   return <p className="text-text-secondary leading-relaxed mb-4">{children}</p>;

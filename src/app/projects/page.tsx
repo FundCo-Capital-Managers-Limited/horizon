@@ -3,7 +3,9 @@ import PageHero from "@/components/PageHero";
 import JoinCta from "@/components/JoinCta";
 
 export const metadata: Metadata = {
-  title: "Projects | Horizon Energy",
+  title: "Projects",
+  description:
+    "From Sierra Leone's first mini-grids to national-scale distribution tenders, explore Horizon Energy's project history across generation, distribution, and institutional power in West Africa.",
 };
 
 const PROJECTS = [

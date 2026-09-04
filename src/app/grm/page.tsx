@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import GrmForm from "@/components/GrmForm";
 
-export const metadata: Metadata = { title: "Grievance Redress Mechanism | Horizon Energy" };
+export const metadata: Metadata = {
+  title: "Grievance Redress Mechanism",
+  description:
+    "Submit complaints, concerns, or feedback about Horizon Energy's sites, staff, or operations. All grievances are logged, acknowledged within 48 hours, and resolved within 30 days where possible.",
+};
 
 export default function GRM() {
   return (

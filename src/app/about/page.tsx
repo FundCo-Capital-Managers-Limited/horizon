@@ -4,7 +4,9 @@ import PageHero from "@/components/PageHero";
 import StatCard from "@/components/StatCard";
 
 export const metadata: Metadata = {
-  title: "About Us | Horizon Energy",
+  title: "About Us",
+  description:
+    "Incorporated in Sierra Leone in 2016, Horizon Energy is the only NABCEP-certified installer in West Africa, built on nearly a decade of NGO-led mini-grid development across all 16 districts of Sierra Leone.",
 };
 
 const CORPORATE = [

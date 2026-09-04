@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 
-export const metadata: Metadata = { title: "Terms and Conditions | Horizon Energy" };
+export const metadata: Metadata = {
+  title: "Terms and Conditions",
+  description:
+    "The terms and conditions governing use of the Horizon Energy Company (SL) Limited website, horizonenergy.org.",
+};
 
 function P({ children }: { children: React.ReactNode }) {
   return <p className="text-text-secondary leading-relaxed mb-4">{children}</p>;
