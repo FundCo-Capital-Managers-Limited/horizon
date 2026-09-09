@@ -19,6 +19,7 @@ const NAV: {
   },
   { label: "Capabilities", href: "/capabilities" },
   { label: "Projects", href: "/projects" },
+  { label: "Partners", href: "/partners" },
   { label: "Sustainability & Safety", href: "/sustainability" },
   { label: "Contact", href: "/contact" },
 ];

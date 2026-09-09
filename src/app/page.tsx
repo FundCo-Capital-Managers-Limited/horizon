@@ -1,6 +1,18 @@
 import Link from "next/link";
 import StatCard from "@/components/StatCard";
 import JoinCta from "@/components/JoinCta";
+import PartnerMarquee from "@/components/PartnerMarquee";
+
+const MARQUEE_PARTNERS = [
+  { name: "Clean Energy Local Currency Fund", logo: "/images/partners/clean-energy-fund-logo.png" },
+  { name: "SMA Solar Technology" },
+  { name: "Fronius" },
+  { name: "Tesla" },
+  { name: "Outback Power" },
+  { name: "Sparkmeter" },
+  { name: "Nuance Energy" },
+  { name: "UK DFID / UNOPS" },
+];
 
 const STATS = [
   { value: "2016", label: "Incorporated in Sierra Leone, building on 8 years of prior fieldwork" },
@@ -187,6 +199,23 @@ export default function Home() {
           >
             Explore All Capabilities
           </Link>
+        </div>
+      </section>
+
+      <section className="bg-surface border-y border-border">
+        <div className="mx-auto max-w-6xl px-6 py-14 sm:py-16">
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-brand mb-8">
+            Financiers, Manufacturers &amp; Development Partners
+          </p>
+          <PartnerMarquee items={MARQUEE_PARTNERS} />
+          <div className="text-center mt-8">
+            <Link
+              href="/partners"
+              className="inline-block rounded-full border border-navy px-6 py-3 text-sm font-semibold text-navy hover:bg-navy hover:text-white transition-colors"
+            >
+              Meet Our Partners
+            </Link>
+          </div>
         </div>
       </section>
 
