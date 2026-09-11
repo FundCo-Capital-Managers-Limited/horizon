@@ -2,6 +2,8 @@ import Link from "next/link";
 import StatCard from "@/components/StatCard";
 import JoinCta from "@/components/JoinCta";
 import PartnerMarquee from "@/components/PartnerMarquee";
+import DistrictCoverageChart from "@/components/DistrictCoverageChart";
+import SolarParticleHero from "@/components/SolarParticleHero";
 
 const MARQUEE_PARTNERS = [
   { name: "Clean Energy Local Currency Fund", logo: "/images/partners/clean-energy-fund-logo.png" },
@@ -16,9 +18,7 @@ const MARQUEE_PARTNERS = [
 
 const STATS = [
   { value: "2016", label: "Incorporated in Sierra Leone, building on 8 years of prior fieldwork" },
-  { value: "~2 MW", label: "Solar PV generation capacity installed to date" },
   { value: "200+ km", label: "Overhead distribution networks installed across West Africa" },
-  { value: "16 / 16", label: "Districts of Sierra Leone with operational coverage" },
 ];
 
 const CAPABILITIES = [
@@ -75,7 +75,8 @@ export default function Home() {
           className="pointer-events-none absolute -bottom-32 left-1/4 h-80 w-80 rounded-full bg-brand/20 blur-3xl"
           aria-hidden
         />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 md:py-36">
+        <SolarParticleHero />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-28 md:py-36">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-4">
             Engineering, Procurement &amp; Construction — Sierra Leone
           </p>
@@ -107,10 +108,15 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {STATS.map((s) => (
-            <StatCard key={s.label} value={s.value} label={s.label} />
-          ))}
+        <div className="grid gap-6 lg:grid-cols-3">
+          <div className="lg:col-span-1 grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+            {STATS.map((s) => (
+              <StatCard key={s.label} value={s.value} label={s.label} />
+            ))}
+          </div>
+          <div className="lg:col-span-2">
+            <DistrictCoverageChart />
+          </div>
         </div>
       </section>
 

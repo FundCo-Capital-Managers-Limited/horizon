@@ -15,7 +15,7 @@ export default function PartnerMarquee({ items }: { items: MarqueeEntry[] }) {
           item.logo ? (
             <div
               key={`${item.name}-${i}`}
-              className="flex h-16 w-40 sm:h-20 sm:w-48 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-3 shadow-sm"
+              className="group flex h-16 w-40 sm:h-20 sm:w-48 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-3 shadow-sm"
               aria-label={item.name}
             >
               <Image
@@ -23,7 +23,7 @@ export default function PartnerMarquee({ items }: { items: MarqueeEntry[] }) {
                 alt={item.name}
                 width={160}
                 height={64}
-                className="h-full w-full object-contain"
+                className="h-full w-full object-contain grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
               />
             </div>
           ) : (
