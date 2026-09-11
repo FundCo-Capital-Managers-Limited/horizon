@@ -1,6 +1,40 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import JoinCta from "@/components/JoinCta";
+
+const GALLERY = [
+  {
+    src: "/images/projects/rooftop-array-installer.jpg",
+    alt: "Horizon Energy technician standing beside a newly installed rooftop solar array",
+    caption: "Rooftop solar array installation, ENFO mini-grid programme",
+  },
+  {
+    src: "/images/projects/ground-mount-array-field.jpg",
+    alt: "Rows of ground-mounted solar panels at a Sierra Leone mini-grid site",
+    caption: "Ground-mounted solar array, Sierra Leone mini-grid site",
+  },
+  {
+    src: "/images/projects/aerial-mini-grid-site.jpg",
+    alt: "Aerial view of a completed solar mini-grid array beside a rural community",
+    caption: "Aerial view of a completed mini-grid installation",
+  },
+  {
+    src: "/images/projects/battery-bank-inverter-room.jpg",
+    alt: "Technician working among rows of battery banks and inverters in a power house",
+    caption: "Battery bank and inverter room, mini-grid power house",
+  },
+  {
+    src: "/images/projects/hybrid-inverter-wall.jpg",
+    alt: "Wall-mounted hybrid inverters and a Sunny Island multicluster box at a power house",
+    caption: "Hybrid inverter installation, power house",
+  },
+  {
+    src: "/images/projects/battery-delivery-crane.jpg",
+    alt: "Crew offloading battery bank equipment from a crane truck on site",
+    caption: "Battery bank delivery and offloading on site",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -85,6 +119,40 @@ export default function Projects() {
                 {p.text}
               </p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-16 sm:pb-20">
+        <div className="mb-10 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-4">
+            Our Work in the Field
+          </h2>
+          <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
+            A look at Horizon crews and hardware on site — from rooftop and
+            ground-mounted solar arrays to the battery banks and inverter
+            rooms that keep mini-grids running.
+          </p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {GALLERY.map((photo) => (
+            <figure
+              key={photo.src}
+              className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="px-4 py-3 text-sm text-text-secondary">
+                {photo.caption}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </section>
