@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import StatCard from "@/components/StatCard";
 import JoinCta from "@/components/JoinCta";
@@ -67,6 +68,20 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-navy to-dark text-white">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero/segbwema-array-aerial.jpg"
+            alt="Aerial view of a Horizon Energy solar mini-grid array installed in a Sierra Leone community"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+        <div
+          className="pointer-events-none absolute inset-0 z-[0] bg-gradient-to-br from-brand-dark/95 via-navy/90 to-dark/85"
+          aria-hidden
+        />
         <div
           className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent/25 blur-3xl"
           aria-hidden

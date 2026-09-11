@@ -53,6 +53,8 @@ export default function About() {
         breadcrumb="About Horizon"
         title="Built From the Ground Up in Sierra Leone's Energy Sector"
         subtitle="Horizon Energy Company (SL) Limited is a Sierra Leone-registered engineering, procurement and construction company specialising in renewable energy generation, mini-grid development, and electrical infrastructure across West Africa."
+        backgroundImage="/images/hero/mini-grid-array-sky.jpg"
+        backgroundImageAlt="Solar mini-grid array installed by Horizon Energy beneath a Sierra Leone sky, with a water tower and telecom mast in the background"
       />
 
       <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">

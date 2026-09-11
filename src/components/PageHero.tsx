@@ -1,14 +1,38 @@
+import Image from "next/image";
+
 export default function PageHero({
   title,
   subtitle,
   breadcrumb,
+  backgroundImage,
+  backgroundImageAlt,
 }: {
   title: string;
   subtitle?: string;
   breadcrumb?: string;
+  backgroundImage?: string;
+  backgroundImageAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-navy to-dark text-white">
+      {backgroundImage && (
+        <>
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={backgroundImage}
+              alt={backgroundImageAlt ?? ""}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+          <div
+            className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-brand-dark/95 via-navy/90 to-dark/88"
+            aria-hidden
+          />
+        </>
+      )}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl"
         aria-hidden
